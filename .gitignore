@@ -5,5 +5,4 @@ native/app/build/
 native/lib/*
 !native/lib/spotifyplus-sdk.aar
 native/local.properties
-liquid-glass.apk
 !native/gradle/wrapper/gradle-wrapper.jar
