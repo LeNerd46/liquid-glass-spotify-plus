@@ -1,0 +1,13 @@
+{
+  "id": "com.lenerd.liquid-glass",
+  "name": "Liquid Glass",
+  "description": "Artwork-driven glass pages for Home, Search, Library, albums, playlists, artists and discography, with a glass player, drawer and menus.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Spotify Plus",
+  "api": 2,
+  "native": {
+    "apk": "liquid-glass.apk",
+    "pluginClass": "com.lenerd.liquidglass.NativePlugin"
+  }
+}
