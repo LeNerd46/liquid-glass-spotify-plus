@@ -1,0 +1,10 @@
+import { build } from 'esbuild';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+await mkdir(path.join(root,'dist/preview'),{recursive:true});
+const result=await build({entryPoints:[path.join(root,'preview/index.tsx')],bundle:true,write:false,format:'iife',platform:'browser',jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'},plugins:[{name:'preview-adapters',setup(builder){builder.onResolve({filter:/^spotifyplus(\/react)?$/},args=>({path:path.join(root,args.path==='spotifyplus'?'preview/fixture.ts':'preview/adapter.tsx')}));}}]});
+const css=await readFile(path.join(root,'preview/style.css'),'utf8');
+await writeFile(path.join(root,'dist/preview/index.html'),`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Liquid Glass — Spotify Plus</title><style>${css}</style></head><body><div id="root"></div><script>${result.outputFiles[0].text.replaceAll('</script>','<\\/script>')}</script></body></html>`);
+console.log('Built self-contained preview: dist/preview/index.html');

@@ -1,0 +1,155 @@
+{
+    "name": "spotifyplus",
+    "version": "0.11.0",
+    "type": "commonjs",
+    "main": "./index.cjs",
+    "types": "./index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./index.d.ts",
+            "default": "./index.cjs"
+        },
+        "./react": {
+            "types": "./components.d.ts",
+            "default": "./components.js"
+        },
+        "./react/animated": {
+            "types": "./animated.d.ts",
+            "default": "./animated.js"
+        },
+        "./react/reanimated": {
+            "types": "./reanimated.d.ts",
+            "default": "./reanimated.js"
+        },
+        "./react/Animated": {
+            "types": "./reanimated.d.ts",
+            "default": "./reanimated.js"
+        },
+        "./react/Gesture": {
+            "types": "./gesture.d.ts",
+            "default": "./gesture.js"
+        },
+        "./build": {
+            "types": "./build.d.ts",
+            "import": "./build.mjs",
+            "require": "./build.cjs"
+        },
+        "./entities": {
+            "types": "./entities.d.ts",
+            "default": "./entities.js"
+        },
+        "./internal/components": {
+            "types": "./internal/components.d.ts",
+            "default": "./components.js"
+        },
+        "./internal/legacy-animated": {
+            "types": "./internal/legacy-animated.d.ts",
+            "default": "./components.js"
+        },
+        "./internal/native-animation": {
+            "types": "./internal/native-animation.d.ts",
+            "default": "./animated.js"
+        },
+        "./internal/native-animation-core": {
+            "types": "./internal/native-animation-core.d.ts",
+            "default": "./animated.js"
+        },
+        "./internal/renderer": {
+            "types": "./internal/renderer.d.ts",
+            "default": "./components.js"
+        },
+        "./internal/script-api": {
+            "types": "./internal/script-api.d.ts",
+            "default": "./index.cjs"
+        },
+        "./internal/script-registry": {
+            "types": "./internal/script-registry.d.ts",
+            "default": "./index.cjs"
+        }
+    },
+    "files": [
+        "index.cjs",
+        "dev.cjs",
+        "index.d.ts",
+        "components.js",
+        "components.d.ts",
+        "animated.js",
+        "animated.d.ts",
+        "reanimated.js",
+        "reanimated.d.ts",
+        "entities.js",
+        "entities.d.ts",
+        "gesture.js",
+        "gesture.d.ts",
+        "build.mjs",
+        "build.cjs",
+        "build.d.ts",
+        "package.json",
+        "internal/*.d.ts",
+        "native-template"
+    ],
+    "bin": {
+        "spotifyplus": "./dev.cjs"
+    },
+    "dependencies": {
+        "inquirer": "^12.11.1",
+        "@babel/core": "^7.29.0",
+        "@babel/plugin-transform-unicode-property-regex": "^7.29.7",
+        "@babel/generator": "^7.29.0",
+        "@babel/plugin-transform-typescript": "^7.28.6",
+        "esbuild": "^0.28.2"
+    },
+    "typesVersions": {
+        "*": {
+            "react": [
+                "components.d.ts"
+            ],
+            "react/animated": [
+                "animated.d.ts"
+            ],
+            "react/reanimated": [
+                "reanimated.d.ts"
+            ],
+            "react/Animated": [
+                "reanimated.d.ts"
+            ],
+            "react/Gesture": [
+                "gesture.d.ts"
+            ],
+            "build": [
+                "build.d.ts"
+            ],
+            "entities": [
+                "entities.d.ts"
+            ],
+            "internal/components": [
+                "internal/components.d.ts"
+            ],
+            "internal/legacy-animated": [
+                "internal/legacy-animated.d.ts"
+            ],
+            "internal/native-animation": [
+                "internal/native-animation.d.ts"
+            ],
+            "internal/native-animation-core": [
+                "internal/native-animation-core.d.ts"
+            ],
+            "internal/renderer": [
+                "internal/renderer.d.ts"
+            ],
+            "internal/script-api": [
+                "internal/script-api.d.ts"
+            ],
+            "internal/script-registry": [
+                "internal/script-registry.d.ts"
+            ]
+        }
+    },
+    "peerDependencies": {
+        "react": "^19.2.4"
+    },
+    "devDependencies": {
+        "react": "^19.2.4",
+        "@types/react": "^19.2.4"
+    }
+}

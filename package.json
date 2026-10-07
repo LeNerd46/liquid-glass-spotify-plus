@@ -1,0 +1,29 @@
+{
+  "name": "spotifyplus-liquid-glass",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build:native": "node tools/build-native.mjs",
+    "build:ui": "spotifyplus build . --entry src/index.tsx --outfile dist/liquid-glass/index.js",
+    "build": "npm run check && npm run build:native && npm run build:ui",
+    "preview:build": "node tools/build-preview.mjs",
+    "preview": "npm run preview:build && node tools/serve-preview.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "spotifyplus": "file:vendor/spotifyplus"
+  },
+  "devDependencies": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "@types/react": "^19.2.14",
+    "@types/node": "^22.19.17",
+    "typescript": "^5.9.3",
+    "esbuild": "^0.28.2"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

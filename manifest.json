@@ -1,0 +1,22 @@
+{
+  "id": "com.lenerd.liquid-glass",
+  "name": "Liquid Glass Theme",
+  "description": "A new look for Spotify that is inspired by liquid glass. Everything in transparent and bright, giving a much more modern, clean look to Spotify",
+  "version": "1.0.0",
+  "main": "dist/liquid-glass/index.js",
+  "authors": [
+    {
+      "name": "LeNerd46",
+      "url": "https://github.com/LeNerd46"
+    }
+  ],
+  "tags": [
+    "theme",
+    "ui"
+  ],
+  "api": 2,
+  "native": {
+    "apk": "liquid-glass.apk",
+    "pluginClass": "com.lenerd.liquidglass.NativePlugin"
+  }
+}
