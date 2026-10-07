@@ -3,7 +3,7 @@
   "name": "Liquid Glass Theme",
   "description": "A new look for Spotify that is inspired by liquid glass. Everything in transparent and bright, giving a much more modern, clean look to Spotify",
   "version": "1.0.0",
-  "main": "dist/liquid-glass/index.js",
+  "main": "dist/index.js",
   "authors": [
     {
       "name": "LeNerd46",
